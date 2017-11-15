@@ -16,7 +16,7 @@ public class Lib {
 		}
 		catch(Exception e)
 		{
-			e.printStackTrace();
+			
 		}
 		String value=p.getProperty(key);
 		return value;
@@ -31,7 +31,7 @@ public class Lib {
 		}
 		catch(Exception e)
 		{
-			e.printStackTrace();
+		
 		}
 		return value;
 	}
@@ -45,7 +45,7 @@ public class Lib {
 		}
 		catch(Exception e)
 		{
-			e.printStackTrace();
+		
 		}
 		return value;
 	}

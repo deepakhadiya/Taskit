@@ -18,7 +18,7 @@ public class BaseTest implements IAutoConst{
 	public WebDriver driver;
 	
 	//below method to open the browser
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void openApplication()
 	{
 		driver=new ChromeDriver();
@@ -26,7 +26,7 @@ public class BaseTest implements IAutoConst{
 		driver.manage().timeouts().implicitlyWait(Long.parseLong(Lib.getPropertyValue(CONFIG_PATH, "ITO")), TimeUnit.SECONDS);
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void closeApplication()
 	{
 		driver.close();
