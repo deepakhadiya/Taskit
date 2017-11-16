@@ -11,7 +11,7 @@ import org.testng.Reporter;
 
 public class EnterTimeTrackPage {
 	
-	@FindBy(xpath="//div[contains(text(),'Help')]")
+	@FindBy(xpath="//div[@class='popup_menu_icon support_icon']")
 	private WebElement helpMenu;
 	
 	@FindBy(linkText="About your actiTIME")
@@ -59,10 +59,10 @@ public class EnterTimeTrackPage {
 	
 	public void verifyTitlePage(WebDriver driver,String eTitle)
 	{
-		WebDriverWait wait=new WebDriverWait(driver, 10);
+		
 		try
 		{
-		
+		WebDriverWait wait=new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.titleIs(eTitle));
 		Reporter.log("Title is matching",true);
 		}

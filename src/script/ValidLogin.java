@@ -12,8 +12,8 @@ import page.EnterTimeTrackPage;
 import page.LoginPage;
 
 public class ValidLogin extends BaseTest {
-	
-  @Test(priority=0,groups= {"login","smoke"})
+
+  @Test(priority=1,groups= {"login","smoke"})
   public void testValidLogin() {
 	  
 	  //enter the valid username
