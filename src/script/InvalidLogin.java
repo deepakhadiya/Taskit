@@ -10,7 +10,7 @@ import page.LoginPage;
 
 public class InvalidLogin extends BaseTest {
 	
-	@Test(priority=2,groups={"login"})
+	@Test(priority=90001,groups={"login"})
 	public void testInvalidLogin() throws InterruptedException
 	{
 		for(int i=1;i<=Lib.getRowCount(XL_PATH, "InValidLogin");i++) 
