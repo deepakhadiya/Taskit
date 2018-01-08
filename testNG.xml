@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
   <test name="Testchrome1">
-   <parameter name="node" value="http://192.168.241.1:4444/wd/hub" />
+   <parameter name="node" value="http://localhost:4444/wd/hub" />
    <parameter name="browser" value="chrome" />
    <groups>
     <run>
@@ -15,7 +15,7 @@
     </packages>
   </test> <!-- Test -->
   <test name="Testfirefox1">
-  <parameter name="node" value="http://192.168.241.1:4444/wd/hub" />
+  <parameter name="node" value="http://localhost:4444/wd/hub" />
   <parameter name="browser" value="firefox" />
   <groups>
    <run>
