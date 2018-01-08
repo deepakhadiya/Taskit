@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Optional;
 
 public class BaseTest implements IAutoConst{
 
@@ -24,7 +25,7 @@ public class BaseTest implements IAutoConst{
 	//below method to open the browser
 	@Parameters({"node","browser"})
 	@BeforeMethod(alwaysRun=true)
-	public void openApplication(String node,String browser) throws MalformedURLException
+	public void openApplication(@Optional(http://localhost:4444/wd/hub") String node,@Optional("chrome") String browser) throws MalformedURLException
 	{
 //		driver=new ChromeDriver();
 		URL whichSystem=new URL(node);
