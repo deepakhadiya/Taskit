@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests">
+<suite name="Suite" parallel="false" verbose="1">
+ 
+ <parameter name="platform.name" value="web" />
+ 	<listeners>
+ 	<listener class-name="com.varlet.automation.listener.TestNgListeners" />
+ 	</listeners>
+ 
   <test name="Testchrome1">
-   <parameter name="node" value="http://192.168.1.114:4444/wd/hub" />
-   <parameter name="browser" value="chrome" />
-   <groups>
-    <run>
-     <include name="login" />
-     <include name="version"/>
-    </run>
-   </groups>
- 	<packages>
-     <package name="script" />
-    </packages>
-  </test> <!-- Test -->
-  <test name="Testfirefox1">
-  <parameter name="node" value="http://192.168.1.114:4444/wd/hub" />
-  <parameter name="browser" value="firefox" />
-  <groups>
-   <run>
-    <include name="version"/>
-   </run>
-  </groups>
- 	<packages>
-     <package name="script" />
-    </packages>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<!--    <parameter name="node" value="http://192.168.1.114:4444/wd/hub" /> -->
+<!--    <parameter name="browser" value="chrome" /> -->
+<!--    <groups> -->
+<!--     <run> -->
+<!--      <include name="login" /> -->
+<!--      <include name="version"/> -->
+<!--     </run> -->
+<!--    </groups> -->
+<!--  	<packages> -->
+<!--      <package name="script.testInvalidLogin" /> -->
+<!--     </packages> -->
+	<classes>
+	<class name="com.varlet.automation.test.InvalidLogin"></class>
+	</classes>
+
+  </test> 
+<!-- 	  <test name="Testfirefox1"> -->
+<!-- 	  <parameter name="node" value="http://192.168.1.114:4444/wd/hub" /> -->
+<!-- 	  <parameter name="browser" value="firefox" /> -->
+<!-- 	  <groups> -->
+<!-- 	   <run> -->
+<!-- 	    <include name="version"/> -->
+<!-- 	   </run> -->
+<!-- 	  </groups> -->
+<!-- 	 	<packages> -->
+<!-- 	     <package name="script" /> -->
+<!-- 	    </packages> -->
+<!-- 	  </test> -->
+ </suite>
